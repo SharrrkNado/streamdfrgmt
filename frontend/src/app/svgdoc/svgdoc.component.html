@@ -1,0 +1,16 @@
+<small>{{doc.title}}</small>
+<div>
+  <svg width="100" viewBox="0 0 500 705" preserveAspectRatio>
+    <rect x="0" y="0" width="500" height="705" stroke="blue" fill="none" />
+    <rect *ngFor="let b of doc.boxes" 
+    [attr.x]="b.x" 
+    [attr.y]="b.y" 
+    [attr.width]="b.w" 
+    [attr.height]="b.h" 
+    stroke="red" fill="none"
+    vector-effect="non-scaling-stroke"
+    class="box"
+    (click)="showInfo(b)"
+     />
+  </svg>
+</div>

@@ -1,0 +1,18 @@
+
+<h1>Streaming data</h1>
+
+<p *ngIf="isLoading">loading...{{docs.length}}</p>
+<div class="container">
+  <ng-container *ngFor="let d of docs; trackBy: trackById">
+    <app-svgdoc [doc]="d"></app-svgdoc>
+  </ng-container>
+</div>
+<pre>
+  <h1>last doc</h1>
+  {{docs[docs.length-1] | json}}
+</pre>
+<blockquote>
+  <li>https://github.com/dscape/clarinet</li>
+  <li>https://github.com/jimhigson/oboe.js/</li>
+  <li>https://www.npmjs.com/package/oboe</li>
+</blockquote>
